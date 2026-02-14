@@ -1,11 +1,15 @@
 /*
   ==============================================================================
 
-    AudioController.cpp
-    Created: 10 Feb 2026 10:00:51pm
+    AudioConstants.h
+    Created: 14 Feb 2026 2:20:10pm
     Author:  Basile Sens
 
   ==============================================================================
 */
 
-#include "AudioController.h"
+#pragma once
+
+constexpr int kMinAudioDevices = 0;
+constexpr int kMaxAudioDevices = 256;
+

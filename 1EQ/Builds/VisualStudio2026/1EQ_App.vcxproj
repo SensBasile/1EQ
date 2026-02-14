@@ -146,10 +146,11 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\AudioController.cpp"/>
-    <ClCompile Include="..\..\Source\AudioSetup.cpp"/>
-    <ClCompile Include="..\..\Source\AudioProcess.cpp"/>
-    <ClCompile Include="..\..\Source\MainComponent.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\Devices\AudioSelector.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\MainComponent.cpp"/>
+    <ClCompile Include="..\..\Source\Audio\Process\AudioProcess.cpp"/>
+    <ClCompile Include="..\..\Source\Audio\Setup\AudioSetup.cpp"/>
+    <ClCompile Include="..\..\Source\Audio\AudioController.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
@@ -2892,10 +2893,12 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\AudioController.h"/>
-    <ClInclude Include="..\..\Source\AudioSetup.h"/>
-    <ClInclude Include="..\..\Source\AudioProcess.h"/>
-    <ClInclude Include="..\..\Source\MainComponent.h"/>
+    <ClInclude Include="..\..\Source\Utils\AudioConstants.h"/>
+    <ClInclude Include="..\..\Source\GUI\Devices\AudioSelector.h"/>
+    <ClInclude Include="..\..\Source\GUI\MainComponent.h"/>
+    <ClInclude Include="..\..\Source\Audio\Process\AudioProcess.h"/>
+    <ClInclude Include="..\..\Source\Audio\Setup\AudioSetup.h"/>
+    <ClInclude Include="..\..\Source\Audio\AudioController.h"/>
     <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>

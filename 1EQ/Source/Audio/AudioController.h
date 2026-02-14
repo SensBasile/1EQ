@@ -9,3 +9,6 @@
 */
 
 #pragma once
+
+class AudioController {
+};

@@ -2,17 +2,23 @@
 
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="1EQ\Source\Audio\Setup">
-      <UniqueIdentifier>{8FE3043D-D067-13A0-FA27-3823A92826B2}</UniqueIdentifier>
+    <Filter Include="1EQ\Source\Utils">
+      <UniqueIdentifier>{30C41F3A-ED76-3A46-BFBF-AD21453972EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1EQ\Source\GUI\Devices">
+      <UniqueIdentifier>{737DD11F-13B0-5F7D-97F7-822A44F8C4CF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1EQ\Source\GUI">
+      <UniqueIdentifier>{CB313A66-2F88-4210-25D0-DE3411C9FE5A}</UniqueIdentifier>
     </Filter>
     <Filter Include="1EQ\Source\Audio\Process">
       <UniqueIdentifier>{21E2C83F-25C9-0FAF-0A81-49DCAAC361E3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="1EQ\Source\Audio\Setup">
+      <UniqueIdentifier>{8FE3043D-D067-13A0-FA27-3823A92826B2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="1EQ\Source\Audio">
       <UniqueIdentifier>{899629BB-001B-98B2-E244-6FCF8C09ECC4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="1EQ\Source\GUI">
-      <UniqueIdentifier>{CB313A66-2F88-4210-25D0-DE3411C9FE5A}</UniqueIdentifier>
     </Filter>
     <Filter Include="1EQ\Source">
       <UniqueIdentifier>{76F30A8A-C8CE-F616-D890-7438D624D674}</UniqueIdentifier>
@@ -685,17 +691,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\AudioController.cpp">
-      <Filter>1EQ\Source\Audio</Filter>
+    <ClCompile Include="..\..\Source\GUI\Devices\AudioSelector.cpp">
+      <Filter>1EQ\Source\GUI\Devices</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\AudioSetup.cpp">
-      <Filter>1EQ\Source\Audio\Setup</Filter>
+    <ClCompile Include="..\..\Source\GUI\MainComponent.cpp">
+      <Filter>1EQ\Source\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\AudioProcess.cpp">
+    <ClCompile Include="..\..\Source\Audio\Process\AudioProcess.cpp">
       <Filter>1EQ\Source\Audio\Process</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\MainComponent.cpp">
-      <Filter>1EQ\Source\GUI</Filter>
+    <ClCompile Include="..\..\Source\Audio\Setup\AudioSetup.cpp">
+      <Filter>1EQ\Source\Audio\Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Audio\AudioController.cpp">
+      <Filter>1EQ\Source\Audio</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>1EQ\Source</Filter>
@@ -3615,17 +3624,23 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\AudioController.h">
-      <Filter>1EQ\Source\Audio</Filter>
+    <ClInclude Include="..\..\Source\Utils\AudioConstants.h">
+      <Filter>1EQ\Source\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\AudioSetup.h">
-      <Filter>1EQ\Source\Audio\Setup</Filter>
+    <ClInclude Include="..\..\Source\GUI\Devices\AudioSelector.h">
+      <Filter>1EQ\Source\GUI\Devices</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\AudioProcess.h">
+    <ClInclude Include="..\..\Source\GUI\MainComponent.h">
+      <Filter>1EQ\Source\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Audio\Process\AudioProcess.h">
       <Filter>1EQ\Source\Audio\Process</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\MainComponent.h">
-      <Filter>1EQ\Source\GUI</Filter>
+    <ClInclude Include="..\..\Source\Audio\Setup\AudioSetup.h">
+      <Filter>1EQ\Source\Audio\Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Audio\AudioController.h">
+      <Filter>1EQ\Source\Audio</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>

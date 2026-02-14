@@ -2,23 +2,13 @@
 
 //==============================================================================
 MainComponent::MainComponent()
+    : mAudioSelector(deviceManager)
 {
     // Make sure you set the size of the component after
     // you add any child components.
     setSize (800, 600);
+    addAndMakeVisible(mAudioSelector);
 
-    // Some platforms require permissions to open input channels so request that here
-    if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
-        && ! juce::RuntimePermissions::isGranted (juce::RuntimePermissions::recordAudio))
-    {
-        juce::RuntimePermissions::request (juce::RuntimePermissions::recordAudio,
-                                           [&] (bool granted) { setAudioChannels (granted ? 2 : 0, 2); });
-    }
-    else
-    {
-        // Specify the number of input and output channels that we want to open
-        setAudioChannels (2, 2);
-    }
 }
 
 MainComponent::~MainComponent()
@@ -57,19 +47,19 @@ void MainComponent::releaseResources()
 
     // For more details, see the help for AudioProcessor::releaseResources()
 }
-
-//==============================================================================
-void MainComponent::paint (juce::Graphics& g)
+void MainComponent::paint(juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
-    // You can add your drawing code here!
+    g.setColour (juce::Colours::transparentBlack);
+    g.fillRect (getLocalBounds());
 }
-
 void MainComponent::resized()
 {
     // This is called when the MainContentComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
+    auto rect = getLocalBounds();
+
+    mAudioSelector.setBounds (rect.removeFromLeft (proportionOfWidth (0.6f)));
+    rect.reduce (10, 10);
 }
+
